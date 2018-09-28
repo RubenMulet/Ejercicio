@@ -70,9 +70,10 @@
   }
   ```
   6- Interface
-  <dt>Las interfaces con java son colecciones de metodos y propiedades constantes y a diferencia de las clases abstractan nos
+  Las interfaces con java son colecciones de metodos y propiedades constantes y a diferencia de las clases abstractan nos
   brindan un mecanismo de encapsulación. En verdad es bastante parecido a los metodos pues son una lista de funciones, tambien con
   una diferencia: no existe su codigo, solo son una serie de funciones.
+ 
  ```java
  public interface Constantes {
     double VALOR_MAXIMO = 10000000.0;
