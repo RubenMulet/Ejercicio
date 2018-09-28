@@ -4,8 +4,11 @@
   adelante para ser abstraidos y usados posteriormente. Dentro de una clase deben haber otros atributos que son los que caracterizan
   esa clase, como podría ser la clase profesor.
   Ejemplo:
+  ```java
   public static Profesor(){
-  }</dt>
+  }
+  ```
+  </dt>
   
   <dl>2- Objetos<dl/>
   <dt>Lo primero que debemos saber del objeto es que no se trata de un objeto en si, no es algo fisico como podría ser el ratón que tienes
