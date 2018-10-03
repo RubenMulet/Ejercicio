@@ -1,5 +1,5 @@
-# Ejercicio
-1- Clases
+
+# 1- Clases
  Una clase en java es una plantilla en la cual creamos objetos del mismo tipo de la clase, los cuales seran utilizados más
   adelante para ser abstraidos y usados posteriormente. Dentro de una clase deben haber otros atributos que son los que caracterizan
   esa clase, como podría ser la clase profesor.
@@ -11,7 +11,7 @@
   ```
  
   
-2- Objetos
+# 2- Objetos
   Lo primero que debemos saber del objeto es que no se trata de un objeto en si, no es algo fisico como podría ser el ratón que tienes
   en la mano, en verdad es algo diferente, existente dentro de una clase. Un objeto es una entidad usada en la memoria que contiene
   propiedades y atributos, incluso operaciones llamadas métodos.
@@ -24,7 +24,7 @@
   }
  ```
   
-3- Sobrecarga de métodos
+# 3- Sobrecarga de métodos
   Para comprender que es la sobrecarga de métodos, primero debemos comprender que es un método, que básicamente es una operación;
   ya sea lógica o aritmetico. Bien, una simple operación, pudiendo haber más de una en un método; ahora bien, un método sobrecargada
   en principio se debe saber que es bastante normal ser usado, sencillamente consiste en que en una clase haya más de un método
@@ -39,7 +39,7 @@
   }
  ```
   
-4- Herencia
+# 4- Herencia
   Ah, la herencia, ese tema de final del curso pasado que como bien indicaba su nombre consistia en que una clase hija heredase 
   las propiedades de su clase padre, una clase con varios objetos podrian ser heredados en una segunda clase sin necesidad de
   estar escritos en su código. Esto se conseguia mediante una sencilla línea "extends clasePadre". Cabe resaltar que la clase hija
@@ -55,7 +55,7 @@
   }
 ```
   
-  5- Polimorfismo
+  # 5- Polimorfismo
   La palabra en si, "polimorfismo" significa muchas formas. Si, como indica, es una clase que también está ligada a la herencia
   ya que hereda muchas cualidades de la clase padre, bueno todas. La diferencia es que esta clase es abstracta, no se puede instanciar
   es como si realmente no existiese, pero a su vez se pueden heredar sus propieades. La clave del polimorfismo es que la clase que parte
@@ -69,7 +69,7 @@
   super(atributos abstract);
   }
   ```
-  6- Interface
+  # 6- Interface
   Las interfaces con java son colecciones de metodos y propiedades constantes y a diferencia de las clases abstractan nos
   brindan un mecanismo de encapsulación. En verdad es bastante parecido a los metodos pues son una lista de funciones, tambien con
   una diferencia: no existe su codigo, solo son una serie de funciones.
