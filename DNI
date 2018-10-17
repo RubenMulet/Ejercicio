@@ -1,0 +1,49 @@
+import java.util.*;
+public class DNI {
+	public static Scanner lector=new Scanner(System.in);
+	
+	public boolean validarDNI(String dni) {
+		char[] letraDni = {
+	       'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D',  'X',  'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'
+	     }; 
+		String nif="";
+		int num=0;
+		
+		for (int i=0; i<8; i++) {
+			   
+            if(!Character.isDigit(dni.charAt(i))){
+                  return false;    
+            }
+            num += dni.charAt(i);     
+       }
+		num = Integer.parseInt(nif);
+		
+        num %= 23;
+  
+        // verifico que la letra del dni corresponde con la del array
+        if ((Character.toUpperCase(dni.charAt(8))) != letraDni[num]){
+             return false;
+       }  
+      
+       return true;
+   } 
+		
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Dime el DNi");
+		String dni;
+		dni=lector.nextLine();
+		
+		if(dni.length()!=9) {
+			System.out.println("DNI mal escrito");
+		}
+		
+		if (!Character.isLetter(dni.charAt(8))) {
+	            System.out.println("La ultima lletra no es un caracter");
+	    }
+		
+	}
+
+}
