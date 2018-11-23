@@ -65,6 +65,26 @@ num = n;
 }
 ```
 #5- Programación concurrente:
+La programación o computación concurrente es un conjunto de procesos o hilos que tienen una simultanedad entre ellos cuyas tareas
+son interactivas. Dichas tareas se pueden ejecutar en una sola unidad central o con varios procesadores. Profundizando más en ello,
+la programación concurrente trata de encontrar un equilibrio entre los procesos e hilos para que no compitan por los recursos del 
+ordenador, sino para que se sincronicen entre ellos y de esa forma hacer que las tareas y ejecuciones sean más concurridas o fluidas.
+```java
+public class NumberRunnable implements Runnable {
+    int num;
+     
+    public NumberRunnable(int n){
+        num = n;
+    }
+     
+    public void run(){
+        for (int k=0; k < 200; k++){
+            System.out.print(num);
+        }
+    }
+}
+```
+#6- Computación paralela:
 
 
 
