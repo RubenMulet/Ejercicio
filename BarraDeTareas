@@ -59,7 +59,7 @@ public class Barra extends JFrame {
 		
 		JButton bNotepad = new JButton("New button");
 		bNotepad.setIcon(new ImageIcon("E:\\Segon de DAM\\Programacion de servicios y procesos\\Tema3\\notepad++.png"));
-		bAndroid.addActionListener(new ActionListener() {
+		bNotepad.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
 					ProcessBuilder pb=new ProcessBuilder("\"C:\\Program Files\\Notepad++\\notepad++.exe\"","Notepat");
@@ -74,7 +74,7 @@ public class Barra extends JFrame {
 		
 		JButton bEclipse = new JButton("New button");
 		bEclipse.setIcon(new ImageIcon("E:\\Segon de DAM\\Programacion de servicios y procesos\\Tema3\\eclipse.png"));
-		bAndroid.addActionListener(new ActionListener() {
+		bEclipse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
 					ProcessBuilder pb=new ProcessBuilder("\"C:\\Program Files\\eclipse\\eclipse.exe\"","Eclipse");
@@ -89,7 +89,7 @@ public class Barra extends JFrame {
 		
 		JButton bVisual = new JButton("New button");
 		bVisual.setIcon(new ImageIcon("E:\\Segon de DAM\\Programacion de servicios y procesos\\Tema3\\visualStudio.png"));
-		bAndroid.addActionListener(new ActionListener() {
+		bVisual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
 					ProcessBuilder pb=new ProcessBuilder("\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Common7\\IDE\\devenv.exe\"","Visual Studio");
