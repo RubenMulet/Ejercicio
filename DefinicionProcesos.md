@@ -1,15 +1,18 @@
 #1- Aplicación: 
+
 Una aplicación informatica es in programa software que consiste en un diseño de herramienta para el
 usuario, herramienta que sirve para ejecutar una o diversas tareas al mismo tiempo. Todo depende del tipo de aplicación
 que tengamos y el uso que esta tenga. Algunos ejemplo de estas aplicaciones podrían ser los procesos de texto, calculo,
 el excel...
 
 #2- Servicio: 
+
 Un servicio es una especie de programa que no tiene interficie gráfica, con lo cual el usuario normalmente 
 no puede verlo y su función habitual consiste en ayudar a otro programa. Este servicio busca satisfacer las necesidades del
 usaario mediante un conjunto de actividades que operan mediante condiciones.
 
 #3- Proceso:
+
 Un proceso es una pequeña parte de un programa digamos, es una instrucción. Un proceso es una instrucción de un
 programa informatico que se ejecuta en una determinada situación, dependiendo sobretodo del programa. Estas instrucciones se
 leen conforme se ejecuta dicho programa y eso también implica la memoria reservada para esa instrucción y sus contenidos, de 
@@ -48,6 +51,7 @@ public class Uno {
 ```
   
 #4- Hilo: 
+
 El hilo es algo similar a un proceso, sin embargo su nombre, "hilo" lo recibe por su finura, su liviano peso que
 ejerce sobre la memoria RAM. Si empezamos varios procesos estos ocuparan el espacio que tenga que usar dentro de la memoria
 RAM, sin embargo un hilo o subproceso es mucho más fácil de ejecutar. Sus teareas son encadenadas y van en secuencia una
@@ -65,6 +69,7 @@ num = n;
 }
 ```
 #5- Programación concurrente:
+
 La programación o computación concurrente es un conjunto de procesos o hilos que tienen una simultanedad entre ellos cuyas tareas
 son interactivas. Dichas tareas se pueden ejecutar en una sola unidad central o con varios procesadores. Profundizando más en ello,
 la programación concurrente trata de encontrar un equilibrio entre los procesos e hilos para que no compitan por los recursos del 
@@ -84,7 +89,32 @@ public class NumberRunnable implements Runnable {
     }
 }
 ```
-#6- Computación paralela:
+#6- Programación paralela:
 
+La programación paralela consiste en el aprovechamiento de multiples recursos del ordenador al mismo tiempo para resolver problemas. 
+Se podría decir que se diferencia de la programación concurrente debido a que varias operadiones o aplicaciones se pueden llevar a
+cabo al mismo tiempo. Para poner un ejemplo, unos problemas se dividen por dos o más partes para solucionarlos de forma simultanea y
+más importante, de forma discreta para que el usuario no lo note. Cada parte se compone de unas cuantas instrucciones y estas se 
+dividen y con el uso de los procesadores se resuelven al ejecutarse.
+
+```java
+Result solve (Problem problem) {
+    if problem.size < SEQUENTIAL_THRESHOLD
+        return solveSequentially(problem);
+    else {
+        Result left, right;
+        INVOKE-IN-PARALLEL {
+            left = solve(extractLeftHalf(problem));
+            right = solve(extractRightHalf(problem));
+        }
+        return combine(left, right);
+    }
+}
+```
+#7 Programación distribuida:
+
+La programación distribuida contiene menos información que el resto de programaciones. Esta es usada por cualquier programa que tenga hardware y usa grandes cantidades de código, pero ante todo es un "paradigma de programación", lo que significa que es una forma de 
+resolución de problemas dentro de los ambitos informaticos. Va dirigida a sistema distribuidos, es decir un tipo de red de malla de 
+ordenadores conectados unos con otros.  Este paradigma es el resultado natural del uso de las computadoras y las redes.
 
 
