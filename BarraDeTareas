@@ -1,0 +1,106 @@
+```java
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.SwingConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+
+public class Barra extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Barra frame = new Barra();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Barra() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton bAndroid = new JButton("New button");
+		bAndroid.setIcon(new ImageIcon("E:\\Segon de DAM\\Programacion de servicios y procesos\\Tema3\\androiid.png"));
+		bAndroid.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+					ProcessBuilder pb=new ProcessBuilder("\"C:\\Program Files\\Android\\Android Studio\\bin\\studio64.exe\"","Android studio");
+					pb.start();
+				} catch (Exception e) {
+					System.out.println("Exception"+e);
+				}
+			}
+		});
+		bAndroid.setBounds(10, 75, 89, 86);
+		contentPane.add(bAndroid);
+		
+		JButton bNotepad = new JButton("New button");
+		bNotepad.setIcon(new ImageIcon("E:\\Segon de DAM\\Programacion de servicios y procesos\\Tema3\\notepad++.png"));
+		bAndroid.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+					ProcessBuilder pb=new ProcessBuilder("\"C:\\Program Files\\Notepad++\\notepad++.exe\"","Notepat");
+					pb.start();
+				} catch (Exception e) {
+					System.out.println("Exception"+e);
+				}
+			}
+		});
+		bNotepad.setBounds(109, 75, 100, 86);
+		contentPane.add(bNotepad);
+		
+		JButton bEclipse = new JButton("New button");
+		bEclipse.setIcon(new ImageIcon("E:\\Segon de DAM\\Programacion de servicios y procesos\\Tema3\\eclipse.png"));
+		bAndroid.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+					ProcessBuilder pb=new ProcessBuilder("\"C:\\Program Files\\eclipse\\eclipse.exe\"","Eclipse");
+					pb.start();
+				} catch (Exception e) {
+					System.out.println("Exception"+e);
+				}
+			}
+		});
+		bEclipse.setBounds(219, 75, 94, 86);
+		contentPane.add(bEclipse);
+		
+		JButton bVisual = new JButton("New button");
+		bVisual.setIcon(new ImageIcon("E:\\Segon de DAM\\Programacion de servicios y procesos\\Tema3\\visualStudio.png"));
+		bAndroid.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+					ProcessBuilder pb=new ProcessBuilder("\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Common7\\IDE\\devenv.exe\"","Visual Studio");
+					pb.start();
+				} catch (Exception e) {
+					System.out.println("Exception"+e);
+				}
+			}
+		});
+		bVisual.setBounds(323, 76, 89, 85);
+		contentPane.add(bVisual);
+	}
+}
+```
