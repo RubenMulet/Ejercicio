@@ -1,0 +1,100 @@
+```java
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.ImageIcon;
+
+public class barra2 extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					barra2 frame = new barra2();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public barra2() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton PDF = new JButton("New button");
+		PDF.setIcon(new ImageIcon("E:\\Segon de DAM\\Programacion de servicios y procesos\\Tema3\\pdf.png"));
+		PDF.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				try {
+					ProcessBuilder pb=new ProcessBuilder("\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Acrobat Reader DC.exe\"","PDF");
+					pb.start();
+				} catch (Exception e) {
+					System.out.println("Exception"+e);
+				}
+			}
+			
+		});
+		PDF.setBounds(24, 59, 94, 123);
+		contentPane.add(PDF);
+		
+		JButton Calculo = new JButton("New button");
+		Calculo.setIcon(new ImageIcon("E:\\Segon de DAM\\Programacion de servicios y procesos\\Tema3\\calculo.png"));
+		Calculo.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				try {
+					ProcessBuilder pb=new ProcessBuilder("\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\LibreOffice 6.0\\LibreOffice Calc.exe\"","Calc");
+					pb.start();
+				} catch (Exception e1) {
+					System.out.println("Exception"+e1);
+				}
+			}
+			
+		});
+		Calculo.setBounds(144, 63, 102, 114);
+		contentPane.add(Calculo);
+		
+		JButton cmd = new JButton("New button");
+		cmd.setIcon(new ImageIcon("E:\\Segon de DAM\\Programacion de servicios y procesos\\Tema3\\cmd.png"));
+		cmd.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				try {
+					ProcessBuilder pb=new ProcessBuilder("\"C:\\Users\\vesprada\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\Símbolo del sistema.exe\"","cmd");
+					pb.start();
+				} catch (Exception e1) {
+					System.out.println("Exception"+e1);
+				}
+			}
+			
+		});
+		cmd.setBounds(271, 68, 113, 105);
+		contentPane.add(cmd);
+	}
+}
+```
