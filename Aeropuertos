@@ -1,0 +1,142 @@
+```java
+public class APuerto {
+	private int id;
+	private String nombre;
+	private String pais;
+	private String cod1;
+	private String cod2;
+	private int latitud;
+	private int longitud;
+	private int num;
+	private String letra;
+	private String zona;
+	private String ap;
+	private String oap;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getPais() {
+		return pais;
+	}
+	public void setPais(String pais) {
+		this.pais = pais;
+	}
+	public String getCod1() {
+		return cod1;
+	}
+	public void setCod1(String cod1) {
+		this.cod1 = cod1;
+	}
+	public String getCod2() {
+		return cod2;
+	}
+	public void setCod2(String cod2) {
+		this.cod2 = cod2;
+	}
+	public int getLatitud() {
+		return latitud;
+	}
+	public void setLatitud(int latitud) {
+		this.latitud = latitud;
+	}
+	public int getLongitud() {
+		return longitud;
+	}
+	public void setLongitud(int longitud) {
+		this.longitud = longitud;
+	}
+	public int getNum() {
+		return num;
+	}
+	public void setNum(int num) {
+		this.num = num;
+	}
+	public String getLetra() {
+		return letra;
+	}
+	public void setLetra(String letra) {
+		this.letra = letra;
+	}
+	public String getZona() {
+		return zona;
+	}
+	public void setZona(String zona) {
+		this.zona = zona;
+	}
+	public String getAp() {
+		return ap;
+	}
+	public void setAp(String ap) {
+		this.ap = ap;
+	}
+	public String getOap() {
+		return oap;
+	}
+	public void setOap(String oap) {
+		this.oap = oap;
+	}
+	@Override
+	public String toString() {
+		return "APuerto [id=" + id + ", nombre=" + nombre + ", pais=" + pais + ", cod1=" + cod1 + "]";
+	}
+}
+
+//================================================================================================================
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class BusquedaAeropuertos {
+
+	ArrayList<Aeropuerto> aeroport=new ArrayList();
+	public static void main(String[] args)  {
+		// TODO Auto-generated method stub
+		File f1= new File("airports.dat");
+		FileReader fic = null;
+		try {
+			fic = new FileReader(f1);
+			BufferedReader br=new BufferedReader(fic);
+			String linea;
+			while((linea=br.readLine()) != null){
+				String[] arrayPort=linea.split(",");
+				Aeropuerto apuerto= new Aeropuerto();
+				apuerto.setId(Integer.parseInt(arrayPort[0]));
+				apuerto.setNombre(arrayPort[1]);
+				apuerto.setLocalidad(arrayPort[2]);
+				apuerto.setPais(arrayPort[3]);
+				apuerto.setCod(arrayPort[4]);
+				apuerto.setCod2(arrayPort[5]);
+				apuerto.setLongitud(Integer.parseInt(arrayPort[6]));
+				apuerto.setLatitud(Integer.parseInt(arrayPort[7]));
+				apuerto.setCod3(Integer.parseInt(arrayPort[8]));
+				apuerto.setNum(Integer.parseInt(arrayPort[9]));
+				apuerto.setLetra(arrayPort[10]);
+				apuerto.setZonaHoraria(arrayPort[11]);
+				apuerto.setAp(arrayPort[12]);
+				apuerto.setOap(arrayPort[13]);
+			}
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+}
+```
